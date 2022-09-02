@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const { MONGO_URL } = require("./config/keys");
-const PORT = 9060;
+const PORT = "9060";
 
 const app = express();
 require("dotenv").config();
@@ -31,7 +31,7 @@ mongoose
     }
 
     app.listen(PORT, () => {
-      console.log("server started ");
+      console.log("server started at", PORT);
     });
   })
   .catch((error) => {
